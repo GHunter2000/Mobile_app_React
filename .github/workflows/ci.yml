@@ -2,8 +2,7 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
 
 jobs:
@@ -11,21 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: my-react-app  # 👈 ΕΔΩ είναι το κρίσιμο
+        working-directory: my-react-app   # ⬅️ δουλεύουμε μέσα στο subfolder
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 20               # ⬅️ Χωρίς cache για να μη ζητά lock file
 
-      - run: npm install  # npm ci -> το αλλάζουμε για να δουλεύει και χωρίς lock file
+      - run: npm install                 # ή npm ci αν έχεις lock file committed
       - run: npm run build
 
       - uses: actions/upload-artifact@v4
         with:
           name: dist
           path: my-react-app/dist
-
