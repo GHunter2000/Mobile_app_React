@@ -1,0 +1,865 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    background-image: url('images/image.jpg'); /* Για το background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Κάνει το background σταθερό */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Καταλαμβάνει όλο το ύψος της οθόνης */
+    width: 100%; /* Καταλαμβάνει όλο το πλάτος */
+    display: flex;
+    flex-direction: column; /* Για να στοιχίζονται τα στοιχεία κάθετα */
+    padding-top: 200px; /* Αφήνει χώρο για το header */;
+}
+.line-bottom {
+    border-bottom: 3px solid rgba(47, 128, 237, .37);
+}
+#site-header .header-top .container-1240 {
+    padding: 12px 30px;
+    justify-content: end;
+    height: 45px;
+    display: flex;
+}
+#site-header .main-header.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    z-index: 99999;
+    transition: all .3s cubic-bezier(.22, .61, .36, 1);
+    border-bottom: 1px solid #b2d0f8;
+}
+
+.flex {
+    display: flex;
+}
+.flex-50 {
+    flex-basis: 50%;
+}
+.container-1240 {
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+#site-header .header-top img {
+    max-width: 20px;
+    width: 100%;
+    vertical-align: sub; 
+    margin-right: 5px;
+}
+.container-full {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: auto;
+}
+
+#site-header .main-header .container-1240 {
+    padding: 0 8px; /* Μειώνουμε το padding */
+    display: flex; /* Ενεργοποίηση Flexbox */
+    justify-content: space-between; /* Χώρος ανάμεσα στα στοιχεία */
+    align-items: center; /* Κάθετη ευθυγράμμιση */
+}
+#site-header .logo {
+    padding: 4px 0;
+}
+.flex-25 {
+    flex-basis: 25%;
+}
+#site-header .logo svg {
+    max-width: 190px;
+    width: 100%;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+#site-header .mainnav {
+    justify-content: center;
+}
+.flex {
+    display: flex;
+}
+#site-header .mainnav .menu-item {
+    padding: 0 15px;
+    position: relative;
+    cursor: pointer;
+    line-height: 58px;
+}
+.mainnav  {
+    border: 0.1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 100px;
+    background-color: rgba(6, 41, 105, 0.322);
+    filter: blur(0.3px);
+    margin: 0 auto;
+    margin-top: 6px;;
+    margin-right: 23px;
+}
+#site-header .mainnav a:hover {
+    color: orange; /* Χρώμα πορτοκαλί όταν ο κέρσορας περνάει από πάνω */
+    transition: color 0.3s ease; /* Ομαλή μετάβαση */
+}
+.desktop-menu .mainnav .sub-menu {
+    width: 445px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    align-items: flex-start;
+    top: 65px;
+    pointer-events: initial;
+    transition: all 150ms ease-in-out .1s;
+    border-radius: 6px;
+    z-index: 99999;
+}
+
+.menu-item:hover .sub-menu {
+    display: block; /* Εμφανίζει το sub-menu */
+}
+
+.menu-item .sub-menu .menu-item a {
+    color: black; /* Χρώμα κειμένου */
+    text-decoration: none; /* Αφαίρεση υπογράμμισης */
+    padding: 5px 10px; /* Εσωτερικό περιθώριο */
+    display: block; /* Κάνει τα links να καταλαμβάνουν όλο το πλάτος */
+}
+#site-header .mainnav .sub-menu .menu-item {
+    padding: 0 0 15px;
+    line-height: 28px !important;
+}
+.menu-item .sub-menu .menu-item a:hover {
+    background-color: #f0f0f0; /* Ανοιχτό γκρι φόντο όταν περνάει ο κέρσορας */
+    color: #1f569f; /* Μπλε χρώμα κειμένου */
+}
+.desktop-menu .sub-menu .menu-item a {
+    margin-left: 37px;
+}
+.desktop-menu .menu-item.menu-corporate-presentation {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/menu-icons/website.png);
+    background-repeat: no-repeat;
+}
+
+.desktop-menu .menu-item.menu-e-shop {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/menu-icons/eshop2.png);
+    background-repeat: no-repeat;
+}
+.desktop-menu .menu-item.menu-adv-fbinsta {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/menu-icons/adv-fb-insta.png);
+    background-repeat: no-repeat;
+}
+.desktop-menu .menu-item.menu-adv-google {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/menu-icons/adv-google.png);
+    background-repeat: no-repeat;
+}
+.desktop-menu .menu-item.menu-seo {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/menu-icons/seo.png);
+    background-repeat: no-repeat;
+}
+
+.desktop-menu .menu-item.menu-email-marketing {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/menu-icons/marketing.png);
+    background-repeat: no-repeat;
+}
+#site-header .main-header .container-1240 .button-prosfora {
+    text-align: end;
+    margin-left: auto; /* Μετακίνηση του button-prosfora στα δεξιά */
+    justify-content: center; /* Κεντράρισμα του button-prosfora */
+    display: flex; /* Ενεργοποίηση Flexbox */
+}
+.button-prosfora a {
+    background: #1f569f;
+    border-radius: 50px;
+    color: #fff;
+    padding: 1px 16px;
+    text-decoration: none;
+}
+
+#site-header .main-header .container-1240 .main-nav-wrapper {
+    text-align: center;
+    flex-grow: 1; /* Επιτρέπει στο main-nav-wrapper να καταλάβει τον διαθέσιμο χώρο */
+}
+.flex-50 {
+    flex-basis: 50%;
+}
+.flex-25 {
+    flex-basis: 25%;
+    justify-content: start;
+}
+
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+a {
+    display: block;
+    color: #fff;
+    line-height: 48px;
+    font-weight: 500;
+    transition: linear .4s;
+}
+a {
+    color: #000;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid black;
+}
+#info {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+#site-header {
+    background-color: rgba(172, 154, 182, 0.5); /* Μαύρο με 50% διαφάνεια */
+    padding: 10px 0; /* Προσθέτει λίγο padding για καλύτερη εμφάνιση */
+    position: fixed; /* Κάνει το header σταθερό */
+    top: 0; /* Στο πάνω μέρος της σελίδας */
+    left: 0; /* Στο αριστερό μέρος της σελίδας */
+    right: 0; /* Στο δεξί μέρος της σελίδας */
+    z-index: 99999;
+    transition: all .3s cubic-bezier(.22, .61, .36, 1);
+    border-bottom: 1px solid #b2d0f8;
+    height: 150px; /* Ύψος του header */
+
+}
+
+/* Γονικός container για το history-info και το block-box */
+.history-container {
+    display: flex; /* Ενεργοποίηση Flexbox */
+    justify-content: space-between; /* Χώρος ανάμεσα στα στοιχεία */
+    align-items: flex-start; /* Στοιχίζει τα στοιχεία στην κορυφή */
+    gap: 20px; /* Απόσταση ανάμεσα στα στοιχεία */
+    margin-top: 20px;
+}
+
+/* Μείωση πλάτους του history-info */
+
+/* Στυλ για το block-box */
+.block-box {
+    flex: 1; /* Καταλαμβάνει λιγότερο χώρο */
+    max-width: 30%; /* Περιορίζει το πλάτος */
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 40px; /* Προσθέτει απόσταση από το πάνω μέρος */
+
+}
+
+/* Στυλ για το main-content container */
+
+.site-main {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.blog .site-main, .category .site-main, .single-post .site-main {
+    max-width: unset !important;
+    padding: 0 !important;
+}
+.container-1136, .related-posts-wrapper .container {
+    max-width: 1136px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    padding: 90px 20px;
+}
+h2 {
+    font-size: 2rem;
+}
+h1, h2 {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+.single-post {
+    padding-top: 0;
+}
+.post .wp-post-image {
+    width: 100%;
+    max-height: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+img {
+    border-style: none;
+    height: auto;
+    max-width: 100%;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.page-header {
+    margin: 30px 0;
+}
+li {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+}
+p {
+    margin-top: 0;
+    margin-bottom: .9rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.single-post, .post-meta {
+    text-align: center;
+    font-size: .875rem;
+}
+.single-post, .post-title h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 3.125rem;
+    margin-bottom: 1.25rem;
+    max-width: 80%;
+    margin: 0;
+    padding-left: 220px;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.container h2 {
+ font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 .938rem;
+    line-height: 2.25rem;
+    text-align: start;
+}
+.single-post .post-meta .post-author {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 6px;
+    color: var(--navy-blue);
+}
+.single-post .post-meta .date-published {
+    color: #8492a6;
+    margin-left: 6px;
+}
+.msr-cta-block-no-icon {
+    display: flex
+;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--sunshine-yellow);
+    padding: 44px;
+    margin-bottom: 42px;
+    margin-top: 48px;
+    border-radius: 8px;
+}
+.bg-blush {
+    background-color:#EFF0FB !important;
+    color: black !important;
+}
+
+.msr-cta-block-no-icon .cta-content {
+    width: 100%;
+    display: flex
+;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+}
+.msr-cta-block-no-icon .cta-content p.banner-heading {
+    font-weight: 500;
+    margin: 0 0 .938rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+.msr-cta-block-no-icon .cta-content p {
+    text-align: center;
+}
+.msr-cta-block-no-icon .cta-content p.banner-description {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+}
+
+.msr-cta-block-no-icon .cta-button {
+    display: inline-block;
+    background-color: blue;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0 32px;
+    min-width: 220px;
+}
+
+.single-post .page-content {
+    max-width: 820px;
+    margin: auto;
+    font-size: 1rem;
+    background-color: rgba(128, 117, 224, 0.8); /* Λευκό διαφανές background */
+    padding: 20px; /* Προσθέστε padding για καλύτερη εμφάνιση */
+    border-radius: 10px; /* Στρογγυλεμένες γωνίες */
+}
+.bg-main-blue {
+    background-color: blue!important;
+    color: white !important;
+
+}
+.msr-cta-block-no-icon .cta-content p {
+    text-align: center;
+}
+.bg-main-blue>a {
+    color: white !important;
+}
+.single-post .page-content h2 {
+    font-weight: 500;
+    margin: 0 0 .938rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.single-post .page-content ul {
+    padding-left: 40px;
+}
+dd, dl, dt, li, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+}
+
+#site-footer {
+    overflow: visible; /* Αλλάξτε το από hidden σε visible */
+    z-index: 10; /* Αυξήστε το z-index αν χρειάζεται */
+    position: relative;
+    background-color: red; /* Προσωρινό χρώμα για δοκιμή */
+}
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+#site-footer .bg {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/background/Background-Footer.jpg);
+}
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#site-footer .footer-main {
+    position: relative;
+}
+#site-footer .footer-main .container-1240 {
+    padding: 95px 10px;
+}
+.container-1240 {
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+#site-footer .footer-main .logo {
+    flex-basis: 33.33%;
+}
+#site-footer .footer-main .information-footer {
+    flex-basis: 33.33%;
+    text-align: start;
+    display: flex
+;
+    flex-direction: column;
+    color: #fff;
+}
+#site-footer .info {
+    display: flex
+;
+    align-items: center;
+    margin-bottom: 16px;
+}
+#site-footer .info img {
+    margin-right: 10px;
+    max-width: 25px;
+    width: 100%;
+}
+#site-footer a, #site-footer a:hover, #site-footer span {
+    color: #fff;
+}
+#site-footer .footer-main .footer-right:after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 0;
+    height: 237px;
+    width: 2000px;
+    background: #fff;
+    border-radius: 15px 0 0 15px;
+    z-index: -1;
+}
+#site-footer .footer-main .footer-right {
+    flex-basis: 33.33%;
+    z-index: 99999;
+    position: relative;
+    padding-left: 20px;
+}
+#site-footer .footer-main .footer-right .right-bottom {
+    color: #000 !important;
+    
+}
+#site-footer .footer-bottom {
+    padding: 10px;
+}
+#site-footer .footer-main .footer-right .button-prosfora {
+    margin-bottom: 20px;
+}
+#site-footer .footer-bottom .container-1250 {
+    justify-content: space-between;
+}
+.container-1250{
+    height: 47px;
+}
+.msr-pop-up {
+    visibility: hidden;
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, .2) 0 2px 8px 0;
+    transition: all .5s linear;
+    transform: translateX(680px);
+    overflow-y: scroll;
+    z-index: 999999;
+}
+.msr-pop-up {
+    background-image: url(https://moserlx.com/wp-content/themes/moserlx-v5/images/footer-icons/pop-up.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.msr-pop-up .msr-prosfora {
+    padding: 30px 60px;
+    position: relative;
+}
+.msr-pop-up .msr-close {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+.msr-pop-up .pop-up-top {
+    padding-bottom: 15px;
+}
+.msr-pop-up .pop-up-top h2 {
+    font-size: 35px;
+}
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+.wpcf7 .screen-reader-response {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    word-wrap: normal !important;
+}
+
+.msr-pop-up .wrapper-popup {
+    margin: 20px 0;
+}
+.msr-pop-up p.bold {
+    line-height: 20px;
+}
+.bold {
+    font-weight: 500;
+}
+.msr-pop-up p.input-checkbox {
+    display: flex
+;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.msr-pop-up .pop-up-select li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.wpcf7-form-control-wrap {
+    position: relative;
+}
+.msr-pop-up .pop-up-select input.wpcf7-submit {
+    background: #1f569f;
+    border-radius: 50px;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+}
+@media (max-width: 1024px) {
+    #site-header .main-header .container-1240 .button-prosfora {
+        padding-right: 10px;
+    }
+}
+.mobile-header{
+    display: none;
+}
+@media (max-width: 840px) {
+    .mobile-header {
+        display: block;
+    }
+}
+   
+ @media (max-width: 840px) {
+     #site-header .header-top .container-1240 {
+         position: relative;
+        padding: 0;
+     }
+  }
+
+  @media (max-width: 840px) {
+    .mobile-header .container-1240 {
+        position: relative;
+    }
+}
+
+@media (max-width: 840px) {
+    .mobile-header .main-nav-wrapper.mobile-menu-wrapper {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+    }
+}
+@media (max-width: 840px) {
+    .mobile-menu-wrapper .mobile-menu {
+        position: fixed;
+        visibility: hidden;
+        z-index: 11111;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all .5s linear;
+    }
+}
+@media (max-width: 840px) {
+    #site-header .header-top .container-1240 .phone-desc {
+        position: absolute;
+        top: 22px;
+        right: 10px;
+    }
+}
+.mp-menu {
+    height: 100%;
+}
+.mp-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    transform: translate3d(-100%, 0, 0);
+}
+@media (max-width: 840px) {
+    #site-header .header-top .container-1240 .phone-desc img {
+        margin-right: 0;
+        max-width: 28px;
+    }
+}
+.mp-menu.mp-overlap>.mp-level, .mp-menu.mp-overlap>.mp-level.mp-level-open, .mp-menu>.mp-level, .mp-menu>.mp-level.mp-level-open {
+    box-shadow: none;
+    transform: translate3d(0, 0, 0);
+}
+.mp-level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-100%, 0, 0);
+}
+.mp-level {
+    background-color: #fff;
+    text-align: left;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mp-level {
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: all .5s;
+}
+.mp-level::after, .mp-level::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    content: '';
+    opacity: 0;
+}
+.mp-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@media (max-width: 840px) {
+    .mobile-header .mp-top-level {
+        padding: 5px 0;
+        position: relative;
+    }
+}
+@media (max-width: 840px) {
+    .mobile-header .mp-back img {
+        position: absolute;
+        top: 27px;
+        max-width: 30px;
+        width: 100%;
+        left: 20px;
+    }
+}
+@media (max-width: 840px) {
+    .mobile-header .logo {
+        text-align: center;
+        padding: 4px 0;
+    }
+}
+@media (max-width: 840px) {
+    .mobile-header .mp-bottom-level, .mobile-header .sub-menu {
+        padding: 30px 0 0 20px;
+        flex-basis: 82%;
+    }
+}
+.mp-menu ul li {
+    position: static;
+    padding-bottom: 20px;
+}
+.mp-menu ul li>a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    line-height: 30px;
+    display: block;
+    padding: 0 10px;
+}
+@media (max-width: 840px) {
+    .mobile-header .mp-menu li.has-submenu a {
+        position: relative;
+    }
+}
+@media (max-width: 840px) {
+        .mobile-header .mp-menu li.has-submenu.msr-sub>a:after {
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center right;
+            width: 24px;
+            height: 17px;
+            position: absolute;
+            right: 15px;
+            top: 6px;
+            background-size: 28px;
+            background-image: url(images/contact-map-next.png);
+        }
+    }
+    @media(max-width: 840px) {
+        .mobile-header .mp-top-level {
+            padding: 5px 0;
+            position: relative;
+        }
+    }
+   @media (max-width: 840px) {
+        .mobile-header .mp-back img {
+            position: absolute;
+            top: 27px;
+            max-width: 30px;
+            width: 100%;
+            left: 20px;
+        }
+    }
+    .mp-menu ul li {
+        position: static;
+        padding-bottom: 20px;
+    }
+
+    @media (max-width: 840px) {
+        .mobile-header .button-prosfora a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @media (max-width: 1024px) {
+        #site-header .main-header .container-1240 .button-prosfora {
+            padding-right: 10px;
+        }
+    }
+    .mp-level::after {
+        z-index: -1;
+    }
+    

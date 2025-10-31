@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../MAD GYM"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MAD GYM"
+	}
+}
