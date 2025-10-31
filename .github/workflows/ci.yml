@@ -2,22 +2,30 @@ name: CI
 
 on:
   push:
-    branches: 
+    branches:
       - main
   pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: my-react-app  # 👈 ΕΔΩ είναι το κρίσιμο
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm ci
+
+      - run: npm install  # npm ci -> το αλλάζουμε για να δουλεύει και χωρίς lock file
       - run: npm run build
+
       - uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: dist
+          path: my-react-app/dist
+
